@@ -1,4 +1,4 @@
-module github.com/capnspacehook/taskmaster
+module github.com/amidaware/taskmaster
 
 go 1.12
 
