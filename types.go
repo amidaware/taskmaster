@@ -115,6 +115,7 @@ const (
 	ThirtyOne
 	LastDayOfMonth
 	AllDaysOfMonth DayOfMonth = (1 << 31) - 1
+	AllDaysOfMonthLD DayOfMonth = (1 << 32) - 1
 )
 
 func (d DayOfMonth) String() string {
