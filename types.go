@@ -115,7 +115,6 @@ const (
 	ThirtyOne
 	LastDayOfMonth
 	AllDaysOfMonth DayOfMonth = (1 << 31) - 1
-	AllDaysOfMonthLD DayOfMonth = (1 << 32) - 1
 )
 
 func (d DayOfMonth) String() string {
@@ -846,7 +845,7 @@ type MonthlyTrigger struct {
 	DaysOfMonth          DayOfMonth    // the days of the month during which the task runs
 	MonthsOfYear         Month         // the months of the year during which the task runs
 	RandomDelay          period.Period // a delay time that is randomly added to the start time of the trigger
-	RunOnLastDayOfMonth bool          // indicates that the task runs on the last week of the month
+	RunOnLastDayOfMonth  bool          // indicates that the task runs on the last week of the month
 }
 
 // RegistrationTrigger triggers the task when the task is registered.
