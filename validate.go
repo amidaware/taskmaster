@@ -114,7 +114,7 @@ func validateTriggers(triggers []Trigger) error {
 				return errors.New("invalid WeeklyTrigger: invalid DaysOfWeek")
 			} else if t.WeekInterval == 0 {
 				return errors.New("invalid WeeklyTrigger: WeekInterval is required")
-			} else if t.WeekInterval > 255 {
+			} else if t.WeekInterval > 52 {
 				return errors.New("invalid WeeklyTrigger: invalid WeekInterval")
 			}
 
