@@ -88,7 +88,7 @@ func validateTriggers(triggers []Trigger) error {
 		case MonthlyTrigger:
 			if t.GetStartBoundary() == defaultTime {
 				return errors.New("invalid MonthlyTrigger: StartBoundary is required")
-			} else if t.DaysOfMonth == 0 {
+			} else if t.DaysOfMonth == 0 && !t.LastDayOfMonth {
 				return errors.New("invalid MonthlyTrigger: DaysOfMonth is required")
 			} else if t.DaysOfMonth > AllDaysOfMonth  {
 				return errors.New("invalid MonthlyTrigger: invalid DaysOfMonth")
