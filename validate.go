@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 package taskmaster
@@ -90,8 +91,6 @@ func validateTriggers(triggers []Trigger) error {
 				return errors.New("invalid MonthlyTrigger: StartBoundary is required")
 			} else if t.DaysOfMonth == 0 {
 				return errors.New("invalid MonthlyTrigger: DaysOfMonth is required")
-			} else if t.DaysOfMonth > AllDaysOfMonth  {
-				return errors.New("invalid MonthlyTrigger: invalid DaysOfMonth")
 			} else if t.MonthsOfYear == 0 {
 				return errors.New("invalid MonthlyTrigger: MonthsOfYear is required")
 			} else if t.MonthsOfYear > AllMonths {
